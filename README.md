@@ -1,41 +1,53 @@
 # Assignment 5 – SE333
+## Demo Video
 
+The recorded Playwright execution video is included in the `videos/` folder of this repository.
 ## Project Overview
-This project implements automated testing and CI for the Amazon package.  
-The goal is to ensure software quality using unit tests, integration tests, and continuous integration.
+This project implements automated testing and continuous integration for a sample application using Maven.  
+The goal is to ensure software quality through unit testing, integration testing, and CI automation.
+
+---
 
 ## Tests Implemented
-- **Unit Tests**
-  - specification-based
-  - structural-based
 
-- **Integration Tests**
-  - specification-based
-  - structural-based
+### Unit Tests
+- Specification-based testing
+- Structural-based testing
+
+### Integration Tests
+- Specification-based testing
+- Structural-based testing
+
+---
 
 ## CI Pipeline
-GitHub Actions automatically runs:
+GitHub Actions automatically executes the following on each push:
 
 - Maven build
 - Unit tests
 - Integration tests
 - Checkstyle static analysis
-- JaCoCo test coverage
+- JaCoCo test coverage reporting
+
+---
 
 ## Build Status
 
 ![Build](https://github.com/Christianengida/Assignment5_Code/actions/workflows/SE333_CI.yml/badge.svg)
 
-## Reflection on Traditional vs LLM UI Testing
+---
 
-Reflection paragraph 1
+## Reflection: Traditional vs LLM-Assisted UI Testing
 
-In the traditional Playwright approach, I manually created the test structure, ran Playwright code generation, and cleaned up the generated code so it would run as a JUnit test. This approach gave me more direct control over the test flow and helped me understand exactly how the browser automation worked. I was able to see each selector, action, and assertion clearly, which made debugging easier when a locator or URL assertion failed. However, it also took more time because I had to adjust fragile selectors and rewrite parts of the generated script to make the test more stable.
+### Traditional Playwright Testing
+In the traditional Playwright approach, I manually created the test structure, used Playwright’s code generation, and refined the generated code to integrate with JUnit. This method provided full control over the test flow and allowed me to clearly understand how browser automation operates. Each selector, action, and assertion was explicitly defined, making debugging more straightforward when issues such as incorrect locators or failing assertions occurred. However, this approach required more time and effort, especially when stabilizing selectors and restructuring generated code.
 
-Reflection paragraph 2
+---
 
-In the LLM or MCP-assisted approach, the process felt faster and more guided because the AI helped generate the Playwright structure and suggested ways to improve the test when issues appeared. This reduced some of the manual effort of writing code from scratch and made it easier to move from an idea to a working test. At the same time, I noticed that AI-generated code can still require human review, especially when selectors are too broad or when assertions are too strict for the actual website behavior. Because of that, the LLM-assisted method was helpful for speed, but it was still important for me to understand the test logic and verify that the generated code actually matched the site.
+### LLM / MCP-Assisted Testing
+In the LLM-assisted approach, the workflow was faster and more guided. The AI helped generate Playwright test structures and suggested improvements when issues arose, reducing the amount of manual coding required. This made it easier to move quickly from an idea to a functional test. However, AI-generated code still required careful review. In some cases, selectors were too broad or assertions were too strict for the actual behavior of the application. As a result, understanding the underlying test logic remained essential to ensure correctness.
 
-Reflection paragraph 3
+---
 
-Overall, both approaches were useful in different ways. Traditional Playwright testing helped me build a stronger understanding of browser automation and debugging, while the LLM or MCP-assisted workflow made test generation quicker and more convenient. The manual approach felt more reliable when I needed precise control, but the AI-assisted approach was better for starting quickly and reducing repetitive work. My main takeaway is that AI tools are helpful for accelerating UI testing, but they work best when combined with human review and understanding.
+### Key Takeaways
+Both approaches offer valuable advantages. Traditional Playwright testing strengthens understanding of browser automation and provides precise control, while LLM-assisted testing accelerates development and reduces repetitive work. The most effective strategy is to combine both approaches: leveraging AI for speed while applying human judgment to ensure accuracy, reliability, and maintainability.
