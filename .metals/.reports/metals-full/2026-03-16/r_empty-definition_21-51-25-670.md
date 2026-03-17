@@ -1,3 +1,14 @@
+error id: file://<WORKSPACE>/src/test/java/org/example/playwrightTraditional/BookstoreTraditionalTest.java:_empty_/Playwright#create#
+file://<WORKSPACE>/src/test/java/org/example/playwrightTraditional/BookstoreTraditionalTest.java
+empty definition using pc, found symbol in pc: _empty_/Playwright#create#
+empty definition using semanticdb
+empty definition using fallback
+non-local guesses:
+
+offset: 595
+uri: file://<WORKSPACE>/src/test/java/org/example/playwrightTraditional/BookstoreTraditionalTest.java
+text:
+```scala
 package org.example.playwrightTraditional;
 
 import java.util.regex.Pattern;
@@ -16,7 +27,7 @@ public class BookstoreTraditionalTest {
 
     @Test
     void bookstoreFlow() {
-        try (Playwright playwright = Playwright.create()) {
+        try (Playwright playwright = Playwright.create@@()) {
             Browser browser = playwright.chromium().launch(
                     new BrowserType.LaunchOptions().setHeadless(true)
             );
@@ -50,3 +61,10 @@ public class BookstoreTraditionalTest {
         }
     }
 }
+
+```
+
+
+#### Short summary: 
+
+empty definition using pc, found symbol in pc: _empty_/Playwright#create#

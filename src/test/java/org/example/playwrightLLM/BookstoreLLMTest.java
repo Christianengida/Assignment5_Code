@@ -18,7 +18,7 @@ public class BookstoreLLMTest {
     void bookstoreFlowLLM() {
         try (Playwright playwright = Playwright.create()) {
             Browser browser = playwright.chromium().launch(
-                    new BrowserType.LaunchOptions().setHeadless(false)
+                    new BrowserType.LaunchOptions().setHeadless(true)
             );
 
             BrowserContext context = browser.newContext();
